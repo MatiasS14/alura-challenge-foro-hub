@@ -1,6 +1,7 @@
 package challenge.foro.hub.api.Proyecto.foro.hub.domain.usuario;
 
 import challenge.foro.hub.api.Proyecto.foro.hub.domain.perfil.Perfil;
+import challenge.foro.hub.api.Proyecto.foro.hub.domain.usuario.DTO.DatosUsuario;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.EqualsAndHashCode;
@@ -24,4 +25,11 @@ public class Usuario {
     private String usuario;
     private String contrasena;
 
+    public Usuario(DatosUsuario autor) {
+        id = autor.id();
+        nombre = autor.nombre();
+        email = autor.email();
+        usuario = autor.usuario();
+        contrasena = autor.contrasena();
+    }
 }
