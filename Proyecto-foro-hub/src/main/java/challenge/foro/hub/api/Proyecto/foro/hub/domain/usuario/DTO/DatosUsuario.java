@@ -6,10 +6,9 @@ public record DatosUsuario(
         Long id,
         String nombre,
         String email,
-        String usuario,
-        String contrasena
+        String usuario
 ) {
     public DatosUsuario(Usuario autor) {
-        this(autor.getId(),autor.getNombre(), autor.getEmail(),autor.getUsuario(),autor.getContrasena());
+        this(autor.getId(),autor.getNombre(), autor.getEmail(),autor.getUsuario());
     }
 }
