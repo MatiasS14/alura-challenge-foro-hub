@@ -22,7 +22,7 @@ import java.net.URI;
 public class TopicoController {
     @Autowired
     private TopicoRepository topicoRepository;
-
+    
     @PostMapping
     @Transactional
     public ResponseEntity<DatosTopico> nuevoTopico(@RequestBody @Valid DatosNuevoTopico datosNuevoTopico, UriComponentsBuilder uriComp){
